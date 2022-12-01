@@ -3,6 +3,7 @@
 Em construção, usando:
 
 https://getpelican.com/
+
 https://www.python.org/
 
 
