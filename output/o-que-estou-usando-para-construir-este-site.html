@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="generator" content="Pelican" />
+        <title>O que estou usando para construir este site</title>
+        <link rel="stylesheet" href="https://domicroaomacro.github.io/theme/css/main.css" />
+        <link href="https://domicroaomacro.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Do micro ao macro: uma introdução à termoestatística Atom Feed" />
+        <meta name="description" content="Following is a review of my favorite mechanical keyboard. Resumo dos comando mais utilizados: GitHub Cheatsheets Obtenção de repositório Git Você..." />
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="https://domicroaomacro.github.io/">Do micro ao macro: uma introdução à termoestatística</a></h1>
+                <nav><ul>
+                    <li class="active"><a href="https://domicroaomacro.github.io/category/web-tecnica.html">Web Técnica</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="https://domicroaomacro.github.io/o-que-estou-usando-para-construir-este-site.html" rel="bookmark"
+           title="Permalink to O que estou usando para construir este site">O que estou usando para construir este site</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2022-12-01T12:00:00-03:00">
+                Published: qui 01 dezembro 2022
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="https://domicroaomacro.github.io/author/valdeir-filho.html">Valdeir Filho</a>
+        </address>
+<p>In <a href="https://domicroaomacro.github.io/category/web-tecnica.html">Web Técnica</a>.</p>
+
+</footer><!-- /.post-info -->      <p>Following is a review of my favorite mechanical keyboard.</p>
+<h3>Resumo dos comando mais utilizados:</h3>
+<p><a href="https://training.github.com/downloads/pt_BR/github-git-cheat-sheet/">GitHub Cheatsheets</a></p>
+<h3>Obtenção de repositório Git</h3>
+<p>Você pode obter um projeto Git utilizando duas formas principais. 
+1. Você pode pegar um diretório local que atualmente não está sob controle de versão e transformá-lo em um repositório Git, ou 
+2. Você pode fazer um clone de um repositório Git existente em outro lugar.</p>
+<h2>Instale o Git</h2>
+<p>GitHub fornece clientes desktop que incluem uma interface gráfica para as ações mais comuns em um repositório e atualiza automaticamente para a linha de comando do Git para cenários avançados.</p>
+<h3>GitHub para Windows</h3>
+<p><a href="https://windows.github.com/">windows.github.com</a></p>
+<h3>GitHub para Mac</h3>
+<p><a href="https://mac.github.com/">mac.github.com</a></p>
+<p>Distribuições do Git para Linux e sistemas POSIX são disponíveis no site oficial do Git SCM.</p>
+<h3>Git para todas as plataformas</h3>
+<p><a href="https://git-scm.com/">git-scm.com</a></p>
+<h2>Configure a ferramenta</h2>
+<p>Configure informações de usuário para todos os repositórios locais</p>
+<p><code>$ git config --global user.name "[nome]"</code></p>
+<p>Configura o nome que você quer ligado às suas transações de commit</p>
+<p><code>$ git config --global user.email "[endereco-de-email]"</code></p>
+<p>Configura o email que você quer ligado às suas transações de commit</p>
+<h2>Crie repositórios</h2>
+<p>Inicie um novo repositório ou obtenha de uma URL existente</p>
+<p><code>$ git init [nome-do-projeto]</code></p>
+<p>Cria um novo repositório local com um nome especificado</p>
+<p><code>$ git clone [url]</code></p>
+<p>Baixa um projeto e seu histórico de versão inteiro</p>
+<h2>Faça mudanças</h2>
+<p>Revise edições e crie uma transação de commit</p>
+<p><code>$ git status</code></p>
+<p>Lista todos os arquivos novos ou modificados para serem commitados</p>
+<p><code>$ git diff</code></p>
+<p>Mostra diferenças no arquivo que ainda não foram preparadas</p>
+<p><code>$ git add [arquivo]</code></p>
+<p>Faz o snapshot de um arquivo na preparação para versionamento</p>
+<p><code>$ git diff --staged</code></p>
+<p>Mostra a diferença entre arquivos preparados e suas últimas versões</p>
+<p><code>$ git reset [arquivo]</code></p>
+<p>Retira o arquivo da área de preparação, mas preserva seu conteúdo</p>
+<p><code>$ git commit -m "[mensagem descritiva]"</code></p>
+<p>Grava o snapshot permanentemente do arquivo no histórico de versão</p>
+<h2>Mudanças em grupo</h2>
+<p>Nomeie uma série de commits e combine os esforços completos</p>
+<p><code>$ git branch</code></p>
+<p>Lista todos os branches locais no repositório atual</p>
+<p><code>$ git branch [nome-do-branch]</code></p>
+<p>Cria um novo branch</p>
+<p><code>$ git switch -c [nome-do-branch]</code></p>
+<p>Muda para o branch especificado e atualiza o diretório de trabalho</p>
+<p><code>$ git merge [nome-do-branch]</code></p>
+<p>Combina o histórico do branch especificado ao branch atual</p>
+<p><code>$ git branch -d [nome-do-branch]</code></p>
+<p>Exclui o branch especificado</p>
+<h2>Refatore nomes de arquivos</h2>
+<p>Mude e remova os arquivos versionados</p>
+<p><code>$ git rm [arquivo]</code></p>
+<p>Remove o arquivo do diretório de trabalho e o prepara a remoção</p>
+<p><code>$ git rm --cached [arquivo]</code></p>
+<p>Remove o arquivo do controle de versão mas preserva o arquivo localmente</p>
+<p><code>$ git mv [arquivo-original] [arquivo-renomeado]</code></p>
+<p>Muda o nome do arquivo e o prepara para o commit</p>
+<h2>Suprima o monitoramento</h2>
+<p>Ignore arquivos e diretórios temporários</p>
+<div class="highlight"><pre><span></span><code>*.log
+build/
+temp-*
+</code></pre></div>
+
+<p>Um arquivo de texto chamado <code>.gitignore</code> suprime o versionamento acidental de arquivos e diretórios correspondentes aos padrões especificados</p>
+<p><code>$ git ls-files --others --ignored --exclude-standard</code></p>
+<p>Lista todos os arquivos ignorados neste projeto</p>
+<h2>Salve fragmentos</h2>
+<p>Arquive e restaure mudanças incompletas</p>
+<p><code>$ git stash</code></p>
+<p>Armazena temporariamente todos os arquivos monitorados modificados</p>
+<p><code>$ git stash pop</code></p>
+<p>Restaura os arquivos recentes em stash</p>
+<p><code>$ git stash list</code></p>
+<p>Lista todos os conjuntos de alterações em stash</p>
+<p><code>$ git stash drop</code></p>
+<p>Descarta os conjuntos de alterações mais recentes em stash</p>
+<h2>Revise o histórico</h2>
+<p>Navegue e inspecione a evolução dos arquivos do projeto</p>
+<p><code>$ git log</code></p>
+<p>Lista o histórico de versões para o branch atual</p>
+<p><code>$ git log --follow [arquivo]</code></p>
+<p>Lista o histórico de versões para um arquivo, incluindo mudanças de nome</p>
+<p><code>$ git diff [primerio-branch]...[segundo-branch]</code></p>
+<p>Mostra a diferença de conteúdo entre dois branches</p>
+<p><code>$ git show [commit]</code></p>
+<p>Retorna mudanças de metadata e conteúdo para o commit especificado</p>
+<h2>Desfaça commits</h2>
+<p>Apague enganos e crie um histórico substituto</p>
+<p><code>$ git reset [commit]</code></p>
+<p>Desfaz todos os commits depois de <code>[commit]</code>, preservando mudanças locais</p>
+<p><code>$ git reset --hard [commit]</code></p>
+<p>Descarta todo histórico e mudanças para o commit especificado</p>
+<h2>Sincronize mudanças</h2>
+<p>Registre um repositório remoto e troque o histórico de versão</p>
+<p><code>$ git fetch [nome-remoto]</code></p>
+<p>Baixe todo o histórico de um repositório remoto</p>
+<p><code>$ git merge [nome-remoto]/[branch]</code></p>
+<p>Combina o branch remoto ao branch local atual</p>
+<p><code>$ git push [alias] [branch]</code></p>
+<p>Envia todos os commits do branch local para o GitHub</p>
+<p><code>$ git pull</code></p>
+<p>Baixa o histórico e incorpora as mudanças</p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>links</h2>
+                        <ul>
+                            <li><a href="https://getpelican.com/">Pelican</a></li>
+                            <li><a href="https://www.python.org/">Python.org</a></li>
+                            <li><a href="https://palletsprojects.com/p/jinja/">Jinja2</a></li>
+                            <li><a href="#">You can modify those links in your config file</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+                            <li><a href="https://domicroaomacro.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
+
+                            <li><a href="#">You can add links in your config file</a></li>
+                            <li><a href="#">Another social link</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="https://getpelican.com/">Pelican</a>, which takes great advantage of <a href="https://www.python.org/">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="https://www.smashingmagazine.com/2009/08/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>
