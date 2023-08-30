@@ -1,0 +1,607 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../Artigo%20perceptron/">
+      
+      
+        <link rel="next" href="../Ideias%20para%20contextualiza%C3%A7%C3%A3o/">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.16">
+    
+    
+      
+        <title>Escopo do artigo - Do micro ao macro - Introdução à termoestatística</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.26e3688c.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ecc896b0.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#introducao" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href=".." title="Do micro ao macro - Introdução à termoestatística" class="md-header__button md-logo" aria-label="Do micro ao macro - Introdução à termoestatística" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Do micro ao macro - Introdução à termoestatística
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Escopo do artigo
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+            
+              <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+              </label>
+            
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+            
+              <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+              </label>
+            
+          
+        </form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Abas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href=".." class="md-tabs__link">
+      Bem vindo!
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../Artigo%20perceptron/" class="md-tabs__link">
+      Artigo perceptron
+    </a>
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  <li class="md-tabs__item">
+    <a href="./" class="md-tabs__link md-tabs__link--active">
+      Escopo do artigo
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../Ideias%20para%20contextualiza%C3%A7%C3%A3o/" class="md-tabs__link">
+      Ideias para contextualização
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../landing/" class="md-tabs__link">
+      A gênese da Termodinâmica
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Do micro ao macro - Introdução à termoestatística" class="md-nav__button md-logo" aria-label="Do micro ao macro - Introdução à termoestatística" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Do micro ao macro - Introdução à termoestatística
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Bem vindo!
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Artigo%20perceptron/" class="md-nav__link">
+        Artigo perceptron
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Escopo do artigo
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Escopo do artigo
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introducao" class="md-nav__link">
+    Introdução
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introducao-sobre-a-relevancia-do-tema-e-quao-quente-e-o-assunto-atualmente" class="md-nav__link">
+    Introdução sobre a relevância do tema e quão "quente" é o assunto atualmente
+  </a>
+  
+    <nav class="md-nav" aria-label="Introdução sobre a relevância do tema e quão "quente" é o assunto atualmente">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#breve-compreensao-dos-tipos-de-aprendizagem-de-maquina" class="md-nav__link">
+    Breve compreensão dos tipos de aprendizagem de máquina
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#levantamento-historico-do-desenvolvimento-do-perceptron-ao-chatgpt" class="md-nav__link">
+    Levantamento histórico do desenvolvimento do perceptron ao ChatGPT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#abordagem-da-aprendizagem" class="md-nav__link">
+    Abordagem da aprendizagem
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linha-do-tempo-da-ia" class="md-nav__link">
+    Linha do tempo da IA
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ideias%20para%20contextualiza%C3%A7%C3%A3o/" class="md-nav__link">
+        Ideias para contextualização
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../landing/" class="md-nav__link">
+        A gênese da Termodinâmica
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h2 id="introducao">Introdução</h2>
+<div class="highlight"><pre><span></span><code>O interesse pela Aprendizagem de Máquina (Machine Learning) explodiu na última década. O mundo a nossa volta está passando por uma transformação e vemos uma interação cada vez maior das aplicações de computador com os seres humanos. Softwares de detecção de spam, sistemas de recomendação, marcação em fotos de redes sociais, assistentes pessoais ativados por voz, carros autônomos, smartphones com reconhecimento facial e muito mais.
+
+E o interesse por Machine Learning se mostra ainda mais evidente pelo número cada vez maior de conferências, meetups, artigos, livros, cursos, buscas no Google e profissionais e empresas procurando compreender o que é e como usar aprendizagem de máquina, embora muitos ainda confundem o que podem fazer com o que desejam fazer. Não há como ficar indiferente a esta revolução trazida pela aprendizagem de máquina e, segundo o Gartner, até 2020 todos os softwares corporativos terão alguma funcionalidade ligada a Machine Learning.
+
+Fundamentalmente, Machine Learning é a utilização de algoritmos para extrair informações de dados brutos e representá-los através de algum tipo de modelo matemático. Usamos então este modelo para fazer inferências a partir de outros conjuntos de dados. Existem muitos algoritmos que permitem fazer isso, mas um tipo em especial vem se destacando, as redes neurais artificiais -&gt; [Capítulo 1 - Deep Learning e a Tempestade Perfeita - Deep Learning Book](https://www.deeplearningbook.com.br/deep-learning-a-tempestade-perfeita
+</code></pre></div>
+<p>Ressalta-se que este objeto de discussão não remonta a um tema essencialmente novo. O termo "inteligência artificial" foi descrito a primeira vez em 1956 por John McCarthy, Marvin Minsky, Nathaniel Rochester e Claude Shannon nos Estados Unidos. O objetivo da conferência era reunir pesquisadores de diversas disciplinas, como matemática, psicologia, ciência da computação e engenharia, para discutir a possibilidade de desenvolver máquinas que pudessem exibir comportamento inteligente.</p>
+<h2 id="introducao-sobre-a-relevancia-do-tema-e-quao-quente-e-o-assunto-atualmente">Introdução sobre a relevância do tema e quão "quente" é o assunto atualmente</h2>
+<p>A inteligência artificial está se tornando cada vez mais presente em nossa sociedade, revolucionando a forma como interagimos com o mundo ao nosso redor. Ela está se expandindo em todas as áreas do conhecimento e se manifestando nas tarefas mais simples do cotidiano, impactando a vida de pessoas em todo o mundo, muitas vezes de forma imperceptível.</p>
+<p>A essência da inteligência artificial reside no campo das ciências da computação, onde máquinas e algoritmos são capazes de realizar diversas tarefas. Hoje em dia, podemos encontrar exemplos de seu uso em buscas na internet, compras em plataformas de comércio eletrônico, serviços bancários virtuais, aplicativos de smartphones e uma infinidade de outros produtos e serviços.</p>
+<p>Dentre as diversas abordagens e técnicas desenvolvidas ao longo do tempo, o perceptron desempenha um papel fundamental como uma das bases do aprendizado de máquina e das redes neurais artificiais. A história do perceptron remonta aos anos 1950 e 1960, quando Frank Rosenblatt propôs essa arquitetura revolucionária. Desde então, o perceptron tem sido objeto de estudo e desenvolvimento contínuo, impulsionando avanços significativos em áreas como reconhecimento de padrões, processamento de linguagem natural e chatbots.</p>
+<p>Este artigo acadêmico busca explorar a história do perceptron, desde seus primeiros conceitos até as aplicações modernas, destacando sua relação com tecnologias contemporâneas, como o ChatGPT. Compreender a evolução do perceptron e sua influência na IA é essencial para compreendermos o estado atual da tecnologia e suas possibilidades futuras.</p>
+<p>No decorrer deste artigo, examinaremos os princípios fundamentais do perceptron, explorando seus componentes básicos, como pesos sinápticos e a função de ativação. Também investigaremos as limitações iniciais desse modelo, como sua capacidade de aprendizado apenas de classificações lineares. No entanto, ao longo das décadas, o perceptron evoluiu, culminando no desenvolvimento de redes neurais multicamadas e técnicas de aprendizado profundo que revolucionaram a IA moderna.</p>
+<p>Além disso, analisaremos como o perceptron influenciou a evolução de tecnologias como o ChatGPT. O ChatGPT, baseado no modelo de linguagem GPT (Generative Pre-trained Transformer), utiliza redes neurais profundas para gerar respostas humanas e interagir com os usuários de forma natural. Ao compreender a história do perceptron, podemos traçar uma linha de continuidade até o desenvolvimento de sistemas de conversação avançados, como o ChatGPT, que incorporam técnicas de processamento de linguagem natural e aprendizado de máquina.</p>
+<p>Portanto, este artigo tem como objetivo fornecer uma visão abrangente da história do perceptron e sua relevância na evolução da inteligência artificial, assim como explorar sua relação com tecnologias atuais, como o ChatGPT. Ao compreendermos as raízes desse modelo clássico e sua influência nas tecnologias modernas, podemos ampliar nossa compreensão sobre o progresso da IA e as perspectivas futuras dessa área em constante evolução.</p>
+<h3 id="breve-compreensao-dos-tipos-de-aprendizagem-de-maquina">Breve compreensão dos tipos de aprendizagem de máquina</h3>
+<p>...</p>
+<h3 id="levantamento-historico-do-desenvolvimento-do-perceptron-ao-chatgpt">Levantamento histórico do desenvolvimento do perceptron ao ChatGPT</h3>
+<p>Fonte: <a href="https://www.klondike.ai/en/ai-history-the-dartmouth-conference/">AI history: the Dartmouth Conference - Klondike</a></p>
+<p>![[Pasted image 20230620165422.png]]
+August 1956. From left to right: Oliver Selfridge, Nathaniel Rochester, Ray Solomonoff, Marvin Minsky, Trenchard More, John McCarthy, Claude Shannon.</p>
+<p>A Inteligência Artificial (IA) nasceu oficialmente em 1956, no ano de uma conferência de verão altamente notável realizada no Dartmouth College, em Hanover, New Hampshire, EUA. Nessa ocasião, essa nova disciplina foi fundada.</p>
+<p>A comunidade científica concorda com essa data, pois foi a primeira vez em que os termos "Inteligência" e "Artificial" foram cunhados juntos. No entanto, as origens da IA também podem ser rastreadas por meio das contribuições de pesquisadores nos anos anteriores.</p>
+<p>Quando falamos sobre a história da IA, devemos nos referir aos anos 1940, à Segunda Guerra Mundial e ao surgimento dos primeiros computadores. Foi nessa época que nasceu a ideia da analogia entre o ser humano e a máquina, de que a inteligência humana poderia ser simulada por meio do uso de máquinas, uma condição essencial para o desenvolvimento da IA. Nesse período, um dos maiores pensadores a explorar esse tema foi Alan Turing.</p>
+<p>A valiosa contribuição de Alan Turing Se, nos séculos anteriores, as condições para o estudo da inteligência humana e suas possíveis artificializações foram criadas com estudos científicos e matemáticos, foi apenas com o advento dos primeiros computadores eletrônicos nos anos 1940 que esse interesse tomou um caminho concreto. Um passo decisivo adicional foi dado graças ao trabalho de Alan Turing.</p>
+<p>O cientista britânico Alan Turing é considerado um dos pais da ciência da computação moderna e foi um dos primeiros a se interessar pelo assunto. Seu trabalho não foi apenas teórico, mas teve aplicações muito importantes, especialmente no campo da criptografia. De fato, Turing fez uma contribuição fundamental para o sucesso dos aliados na Segunda Guerra Mundial: graças à sua colaboração com o governo britânico, o código por trás do dispositivo Enigma e as transmissões militares alemãs foram decifrados.</p>
+<p>Com "Sobre Números Computáveis, com uma Aplicação ao Problema da Decidibilidade", escrito em 1936, ele lançou as bases para conceitos como calculabilidade, computabilidade e a máquina de Turing. A máquina de Turing não é uma máquina física, mas apenas um modelo teórico de uma máquina capaz de executar qualquer tipo de sequência computável. Pela primeira vez na história, o conceito atual de software foi introduzido.</p>
+<p>Em 1950, Turing escreveu o artigo "Máquinas de Computação e Inteligência", no qual descreveu o que viria a ser conhecido como "Teste de Turing". O objetivo desse teste, também conhecido como "Jogo da Imitação", era avaliar a presença ou ausência de inteligência "humana" em uma máquina. O teste envolvia a presença de um juiz diante de um terminal, por meio do qual ele poderia se comunicar com duas entidades: um homem e um computador. Se o juiz não conseguisse distinguir o homem da máquina, então o computador teria passado no teste e poderia ser definido como "inteligente".</p>
+<p>O trabalho realizado por Turing (que faleceu em 1954) desempenhou um papel fundamental na Conferência de Dartmouth.</p>
+<p>A Conferência de Dartmouth Em agosto de 1955, um documento, conhecido como "proposta de Dartmouth", foi elaborado por quatro acadêmicos. Ele examina alguns dos principais temas de campos de pesquisa da época, incluindo redes neurais, teoria da computabilidade, criatividade, processamento e reconhecimento de linguagem natural. Esses tópicos seriam discutidos no verão seguinte.</p>
+<p>O documento começa com a declaração:</p>
+<p>"Propomos que um estudo de dois meses, com 10 pessoas, sobre inteligência artificial seja realizado durante o verão de 1956 no Dartmouth College, em Hanover, New Hampshire. O estudo deve proceder com base na conjectura de que todo aspecto da aprendizagem ou qualquer outra característica da inteligência pode, em princípio, ser descrito de forma tão precisa que uma máquina possa simulá-lo. Será feita uma tentativa de descobrir como fazer com que as máquinas usem a linguagem, formem abstrações e conceitos, resolvam tipos de problemas atualmente reservados para humanos e melhorem a si mesmas. Acreditamos que um avanço significativo possa ser feito em um ou mais desses problemas se um grupo cuidadosamente selecionado de cientistas trabalhar neles juntos por um verão."</p>
+<p>No verão seguinte, o grupo de acadêmicos se reuniu no "Dartmouth College para o Projeto de Pesquisa de Verão sobre Inteligência Artificial". Assim, 1956 marca o início oficial de um novo campo de pesquisa que o matemático John McCarthy, professor em Dartmouth e grande promotor desse evento, propôs chamar de Inteligência Artificial.</p>
+<p>Entre os outros organizadores estavam grandes personalidades da época: Marvin Minsky, pesquisador em matemática e neurologia em Harvard; Nathaniel Rochester, diretor de pesquisa de informação em um centro de pesquisa da IBM; Claude Shannon, um matemático já famoso por sua teoria da informação, na época nos laboratórios Bell Telephone.</p>
+<p>O evento, financiado pela Fundação Rockefeller, teve características de um brainstorming, ou seja, um debate aberto com pouca estrutura, com o propósito de compreender se era possível que máquinas se comportassem como humanos. O desafio que impulsionou o grupo foi justamente a tentativa de demonstrar que cada aspecto da aprendizagem e características da inteligência humana poderia ser simulado por uma máquina.</p>
+<p>Qual significado devemos atribuir à Conferência de Dartmouth? A partir das discussões em comum surgiram muitas questões diferentes e posições ideológicas diversas: de um lado, uma visão materialista da mente humana; de outro, uma concepção que tentava destacar as características peculiares e inevitáveis do ser humano em comparação com qualquer máquina.</p>
+<p>Outro problema estava relacionado à tecnologia da época, que não possuía capacidade computacional adequada. Como resultado, a conferência não seguiu como planejado e os resultados foram um tanto inconclusivos. Além disso, vários nomes indicados por McCarthy não compareceram e, no final, houve apenas dez participantes.</p>
+<p>Ainda assim, a importância histórica da conferência é inquestionável. Muitos especialistas se encontraram em Dartmouth pela primeira vez, e esse foi um encontro altamente inspirador. De fato, durante um período subsequente, as principais conquistas no campo da IA foram obtidas por esses mesmos cientistas ou por seus alunos.</p>
+<p>Portanto, foi após a Conferência de Dartmouth que a IA se tornou efetivamente um campo de pesquisa intelectual, mesmo que controverso, e a partir desse momento começou a progredir cada vez mais rapidamente.</p>
+<h3 id="abordagem-da-aprendizagem">Abordagem da aprendizagem</h3>
+<h1 id="linha-do-tempo-da-ia">Linha do tempo da IA</h1>
+<p>~~1943 - Máquina de Turing: Alan Turing propõe a ideia de uma "máquina universal" capaz de realizar qualquer cálculo computacional.</p>
+<p>~~1950 - Teste de Turing: Alan Turing propõe o famoso "Teste de Turing", um teste para determinar se uma máquina pode exibir comportamento inteligente indistinguível do de um ser humano.</p>
+<p>~~1956 - Conferência de Dartmouth: Considerada o marco inicial da IA, a conferência reúne pesquisadores de diferentes áreas para discutir os princípios e possibilidades da IA.</p>
+<p>~~1956-1974 - Era da IA Simbólica: Foco em sistemas de IA baseados em regras lógicas e símbolos simbólicos.</p>
+<p>~~1957 - Perceptron: Frank Rosenblatt desenvolve o Perceptron, um modelo de rede neural artificial.</p>
+<p>~~1959 - “ADALINE” e “MADALINE” - Bernard Widrow e Marcian Hoff, de Stanford, desenvolveram modelos denominados “ADALINE” e “MADALINE”.  ADALINE foi desenvolvido para reconhecer padrões binários de modo que, se ele estivesse lendo bits de transmissão de uma linha telefônica, poderia prever o próximo bit. MADALINE foi a primeira rede neural aplicada a um problema do mundo real, usando um filtro adaptativo que elimina ecos nas linhas telefônicas. Embora o sistema seja tão antigo como os sistemas de controle de tráfego aéreo, ele ainda está em uso comercial.
+Infelizmente, esses sucessos anteriores levaram as pessoas a exagerar o potencial das redes neurais, particularmente à luz da limitação na eletrônica, então disponível na época. Este exagero excessivo, que decorreu do mundo acadêmico e técnico, infectou a literatura geral da época. Muitas promessas foram feitas, mas o resultado foi o desapontamento. Além disso, muitos escritores começaram a refletir sobre o efeito que teria “máquinas pensantes” no homem. A série de Asimov em robôs revelou os efeitos sobre a moral e os valores do homem quando máquinas fossem capazes de fazer todo o trabalho da humanidade. Outros escritores criaram computadores mais sinistros, como HAL do filme 2001.</p>
+<p>INVERNO DA IA</p>
+<p>1986 - Redes Neurais Convolucionais (CNNs): Yann LeCun desenvolve a técnica de CNNs, que revoluciona o campo de visão computacional.</p>
+<p>1997 - Deep Blue: O computador Deep Blue, desenvolvido pela IBM, derrota o campeão mundial de xadrez Garry Kasparov.</p>
+<p>2011 - Watson: O supercomputador Watson, da IBM, vence os campeões humanos no programa de TV Jeopardy!.</p>
+<p>2012 - Aprendizado Profundo (Deep Learning): Avanços significativos no campo do aprendizado profundo, com redes neurais profundas obtendo resultados impressionantes em várias tarefas de IA.</p>
+<p>2014 - Reconhecimento de Imagens: A rede neural convolucional DeepFace, do Facebook, alcança precisão comparável à humana no reconhecimento facial.</p>
+<p>2016 - AlphaGo: O programa de IA AlphaGo, desenvolvido pela DeepMind (empresa do Google), derrota o campeão mundial de Go, considerado um marco importante na IA.</p>
+<p>2017 - GANs: Redes Generativas Adversariais (GANs) ganham destaque, permitindo a geração de conteúdo artificialmente realista, como imagens e vídeos.</p>
+<p>2020 - GPT-3: O modelo de linguagem GPT-3, desenvolvido pela OpenAI, é lançado, demonstrando habilidades impressionantes em tarefas de processamento de linguagem natural.</p>
+<p>Essa é apenas uma breve linha do tempo que destaca alguns marcos importantes na história da IA. Ao longo dos anos, houve muitos outros avanços significativos e o campo continua a evoluir rapidamente.</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Voltar para o topo
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &copy; 2023 <a href="https://github.com/james-willett"  target="_blank" rel="noopener">James Willett</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/james-willett" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/TheJamesWillett" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/in/willettjames/" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.a51614de.min.js"></script>
+      
+    
+  </body>
+</html>
