@@ -1,0 +1,84 @@
+site_name: Do micro ao macro - Introdução à termoestatística
+nav:
+  - 🏠: landing.html
+  - index.md
+  - Ciclos Termodinâmicos:
+    - Ciclo de Carnot: ciclos/Carnot/carnot.md
+    - Ciclo Diesel: ciclos/Diesel/diesel.md
+    - Ciclo Joule: ciclos/Joule/joule.md
+    - Ciclo Otto: ciclos/Otto/Otto.md
+    - Ciclo Stirling: ciclos/Stirling/stirling.md
+
+  - Proposta do Micro ao Macro: proposta.md
+
+  - Produto de Mestrado: produto.md
+
+  - Sobre: sobre.md
+
+        # - Ciclo de Stirling:
+        #     - Introdução: frontend/js/index.md
+        #     - Muito conteúdo: https://ribafs.github.io/javascript
+        # - Bootstrap:
+        #     - Introdução: frontend/bs/index.md
+        # - React:
+        #     - Introdução: frontend/react/index.md
+        # - LocalStorage:
+        #     - Introdução: frontend/localstorage/index.md
+        # - IndexedDb:
+        #     - Introdução: frontend/indexeddb/index.md
+        # - WebSQL:
+        #     - Introdução: frontend/websql/index.md
+
+theme:
+  name: material
+  font:
+    text: Noto Sans
+    code: Cascadia Code
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - toc.integrate
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+  language: pt-br
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+      primary: blue grey
+      accent: ligth green 
+    - scheme: slate 
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode    
+      primary: orange
+      accent: deep orange
+
+extra:
+  social:
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/james-willett
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - admonition
+  - pymdownx.arithmatex:
+      generic: true
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.mark
+  - attr_list
+
+copyright: |
+  &copy; 2023 <a href="https://github.com/james-willett"  target="_blank" rel="noopener">Valdeir Filho</a>
+
+  
