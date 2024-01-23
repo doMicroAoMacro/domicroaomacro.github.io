@@ -1,7 +1,7 @@
 site_name: Do micro ao macro - Introdução à termoestatística
 nav:
   - 🏠: landing.html
-  - index.md
+  - Proposta do Micro ao Macro: proposta.md
   - Ciclos Termodinâmicos:
     - Ciclo de Carnot: ciclos/Carnot/carnot.md
     - Ciclo Diesel: ciclos/Diesel/diesel.md
