@@ -1,15 +1,15 @@
 site_name: Do micro ao macro - Introdução à termoestatística
+index: index.html
 nav:
-  - 🏠: landing.html
-  - Proposta do Micro ao Macro: proposta.md
+  - Home Page: home2.md
   - Ciclos Termodinâmicos:
     - Ciclo de Carnot: ciclos/Carnot/carnot.md
     - Ciclo Diesel: ciclos/Diesel/diesel.md
     - Ciclo Joule: ciclos/Joule/joule.md
     - Ciclo Otto: ciclos/Otto/Otto.md
     - Ciclo Stirling: ciclos/Stirling/stirling.md
-  - Proposta do Micro ao Macro: proposta.md
-  - Sobre: sobre.md
+  - Produto Educacional: produto_educacional.md
+  - Os Autores: autores.md
 
 theme:
   name: material
