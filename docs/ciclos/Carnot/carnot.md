@@ -58,3 +58,6 @@ Essa abordagem permite analisar o caráter geral de uma máquina térmica, desco
 
 ![Ciclo de Carnot ](../../img/ciclo_carnot_animacao.gif)
 
+
+<iframe src="docs/ciclos/Carnot/carnot_graph_animado.html" allowfullscreen="allowfullscreen"></iframe>
+<!-- width="largura" height="altura" frameborder="0"  -->

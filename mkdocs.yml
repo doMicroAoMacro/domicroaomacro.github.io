@@ -8,26 +8,8 @@ nav:
     - Ciclo Joule: ciclos/Joule/joule.md
     - Ciclo Otto: ciclos/Otto/Otto.md
     - Ciclo Stirling: ciclos/Stirling/stirling.md
-
   - Proposta do Micro ao Macro: proposta.md
-
-  - Produto de Mestrado: produto.md
-
   - Sobre: sobre.md
-
-        # - Ciclo de Stirling:
-        #     - Introdução: frontend/js/index.md
-        #     - Muito conteúdo: https://ribafs.github.io/javascript
-        # - Bootstrap:
-        #     - Introdução: frontend/bs/index.md
-        # - React:
-        #     - Introdução: frontend/react/index.md
-        # - LocalStorage:
-        #     - Introdução: frontend/localstorage/index.md
-        # - IndexedDb:
-        #     - Introdução: frontend/indexeddb/index.md
-        # - WebSQL:
-        #     - Introdução: frontend/websql/index.md
 
 theme:
   name: material
@@ -50,15 +32,14 @@ theme:
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
-      primary: blue grey
-      accent: ligth green 
+      primary: white
+      accent: green 
     - scheme: slate 
       toggle:
         icon: material/brightness-4
         name: Switch to light mode    
-      primary: orange
+      primary: black
       accent: deep orange
-
 extra:
   social:
     - icon: fontawesome/brands/github-alt
