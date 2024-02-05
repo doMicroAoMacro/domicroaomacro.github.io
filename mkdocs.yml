@@ -1,21 +1,23 @@
 site_name: Do micro ao macro - Introdução à termoestatística
-index: index.html
 nav:
-  - Home Page: home2.md
+  - Home Page: index.md
   - Ciclos Termodinâmicos:
     - Ciclo de Carnot: ciclos/Carnot/carnot.md
     - Ciclo Diesel: ciclos/Diesel/diesel.md
+    - Ciclo Stirling: ciclos/Stirling/stirling.md
     - Ciclo Joule: ciclos/Joule/joule.md
     - Ciclo Otto: ciclos/Otto/Otto.md
-    - Ciclo Stirling: ciclos/Stirling/stirling.md
   - Produto Educacional: produto_educacional.md
   - Os Autores: autores.md
+  - Blog: 
+    - blog/index.md
 
 theme:
   name: material
+  custom_dir: overrides
   font:
     text: Noto Sans
-    code: Cascadia Code
+    code: Cascadia Code'
   features:
     - navigation.tabs
     - navigation.sections
@@ -58,6 +60,10 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.mark
   - attr_list
+plugins:
+  - blog
+
+
 
 copyright: |
   &copy; 2023 <a href="https://github.com/james-willett"  target="_blank" rel="noopener">Valdeir Filho</a>
