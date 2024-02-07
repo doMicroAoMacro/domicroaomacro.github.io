@@ -2,7 +2,7 @@
 
 ### Como surgiu?
 
-Este site nasceu como fruto da conclusão do Programa de Mestrado Profissional em Ensino de Ciências e Matemática - PPGECM pelo aluno Valdeir Francisco Oliveira Filho, promovido pela Universidade Federal de Uberlândia - UFU e  administrado pelo consórcio formado pelo Instituto de Física, Instituto de Química, Faculdade de Matemática e pelo Instituto de Ciências Exatas e Naturais do Pontal - ICENP. 
+Este site nasceu como produto do mestrado realizado pelo aluno Valdeir Francisco Oliveira Filho do Programa de Mestrado Profissional em Ensino de Ciências e Matemática - PPGECM, da Universidade Federal de Uberlândia - UFU e gerido pelo consórcio formado pelo Instituto de Física, Instituto de Química, Faculdade de Matemática e pelo Instituto de Ciências Exatas e Naturais do Pontal. 
 
 ### Qual sua proposta?
 
