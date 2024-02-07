@@ -6,5 +6,5 @@ Este site nasceu como produto do mestrado realizado pelo aluno Valdeir Francisco
 
 ### Qual sua proposta?
 
-Este produto é parte integrante do livro em elaboração pelos _Prof. Dr. Silvio Salinas_ e pela _Profª. Drª. Debora Coimbra_, intitulado Do **Micro ao Macro: Uma introdução à termoestatística**. Este site abrigará materiais que acompanham a proposta de ensino. Disponibilizamos recursos básicos de multimídia para o ensino de termodinâmica que não estão acessíveis nos primeiros resultados de um buscador convencional, além de um blog que trará alguns assuntos cotidianos relacionados à temática. 
+Este produto é parte integrante do livro em elaboração pelos _Prof. Dr. Silvio Salinas_ e pela _Profª. Drª. Debora Coimbra_, intitulado **Do Micro ao Macro: Uma introdução à termoestatística**. Este site abrigará materiais que acompanham a proposta de ensino. Disponibilizamos recursos básicos de multimídia para o ensino de termodinâmica que não estão acessíveis nos primeiros resultados de um buscador convencional, além de um blog que trará alguns assuntos cotidianos relacionados à temática. 
 
