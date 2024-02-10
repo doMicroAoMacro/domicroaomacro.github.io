@@ -8,12 +8,12 @@
 </p>
 
 
-Neste ano de 2024, especificamente em 12 de junho, comemoram-se 200 anos da famosa publicação Reflexões sobre a Potência Motriz do Fogo, de Sadi Carnot. A obra é considerada o marco inicial da termodinâmica, uma das áreas da física mais importantes da atualidade.
+Neste ano de 2024, especificamente em 12 de junho, comemora-se 200 anos da famosa publicação "Reflexões sobre a Potência Motriz do Fogo", de Sadi Carnot. A obra é considerada o marco inicial da Termodinâmica, uma das áreas da física mais importantes da atualidade.
 
 
 ### Sadi Carnot
 
-Nicolas Léonard Sadi Carnot, ou simplesmente Sadi Carnot foi um físico e engenheiro militar francês que nasceu em Paris em 1796. Seu pai, Lazare Carnot, foi um importante matemático e político francês. Sadi Carnot estudou na École Polytechnique e na École d'application de l'artillerie et du génie.
+Nicolas Léonard Sadi Carnot, ou simplesmente Sadi Carnot foi um engenheiro militar francês, nascido em Paris em 1796. Seu pai, Lazare Carnot, foi um importante matemático e político francês. Sadi Carnot estudou na École Polytechnique e na École d'application de l'artillerie et du génie.
 
 Em 1824, com 28 anos de idade na época, Carnot publicou uma monografia com o título original francês: “Réflexions Sur la Puissance Motrice du Feu et sur les Machines Propes a Développer Cette Puissance”, em tradução direta, Reflexões sobre a Potência Motriz do Fogo.
 
