@@ -45,7 +45,7 @@ theme:
 extra:
   social:
     - icon: fontawesome/brands/github-alt
-      link: https://github.com/james-willett
+      link: https://github.com/valdeirfilho
 
 markdown_extensions:
   - pymdownx.highlight:
