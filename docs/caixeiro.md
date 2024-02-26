@@ -33,4 +33,19 @@ apud MÜHLEN, 2018, p. 125)*
 
 ## Contexto Matemático
 
+O problema do Caixeiro Viajante, ou Travelling Salesman Problem - TSP, é um problema clássico da otimização em matemática e da ciência da computação, que consiste em encontrar o menor caminho que permite visitar um conjunto de cidades e retornar à cidade de origem. O problema pode ser expresso matematicamente como um problema de programação linear inteira, no qual a função objetivo é a soma das distâncias entre as cidades visitadas e as restrições impõem que cada cidade seja visitada exatamente uma vez e que o percurso termine na cidade de origem.
+
+Quando o de pontos N (“cidades”) é pequeno, o problema pode ser resolvido por meio de força bruta, listando todas as rotas possíveis para conferir qual é a mais curta. Mas isso logo se torna inviável quando N aumenta, mesmo com computadores poderosos, porque o número de rotas possíveis é dado pelo fatorial N! = 1 x 2 x … x N, o qual cresce muito rapidamente.
+
+Na Tabela abaixo, é possível verificar que no caso de poucos pontos (vértices) o problema do caixeiro viajante não é tão complicado, porém, quando o problema tem mais pontos, a contagem dos caminhos possíveis já é um número enorme. No caso de 20 pontos é uma quantidade tão grande de cálculos que é impossível resolvê-lo em tempo real.
+
+
+<p align="center" width="100%">
+    <img width="72%" src="/img/contagem_de_permutações.png"> 
+</p>
+
+O problema do Caixeiro Viajante é um exemplo de problema de otimização combinatória, no qual a solução ótima é obtida através da avaliação de todas as possíveis rotas e seleção daquela com o menor custo. Como o número de possíveis rotas cresce exponencialmente com o número de cidades, o problema do Caixeiro Viajante é considerado um problema NP-difícil, o que significa que é muito difícil encontrar uma solução ótima em tempo hábil para problemas com um grande número de cidades.
+
+Existem diversas técnicas matemáticas e algoritmos de otimização que podem ser utilizados para resolver o problema do Caixeiro Viajante, como algoritmos genéticos, meta-heurísticas, programação dinâmica, entre outros. A escolha do método depende do tamanho do problema, da complexidade das restrições e da qualidade desejada da solução.
+
 
