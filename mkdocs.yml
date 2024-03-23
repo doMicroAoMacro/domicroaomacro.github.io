@@ -9,9 +9,9 @@ nav:
     - Ciclo Otto: ciclos/Otto/Otto.md
   - O Caixeiro Viajante: caixeiro.md
   - Os Autores: autores.md
+  - Sobre este Produto: produto_educacional.md
   - Blog: 
     - blog/index.md
-  - Sobre este Produto: produto_educacional.md
 theme:
   name: material
   custom_dir: overrides
